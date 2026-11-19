@@ -1,11 +1,11 @@
 :root {
     --cor-principal: #865323;
     --cor-principal-escura: #665117;
-    --cor-fundo: #F7F9F7;
-    --cor-superficie: #FFFFFF;
-    --cor-texto: #24312B;
-    --cor-texto-secundario: #69766F;
-    --cor-borda: #E1E8E3;
+    --cor-fundo: #f7f9f7;
+    --cor-superficie: #ffffff;
+    --cor-texto: #24312b;
+    --cor-texto-secundario: #69766f;
+    --cor-borda: #e1e8e3;
     --fonte-principal: Arial, Helvetica, sans-serif;
     --largura-container: 1120px;
     --raio-pequeno: 8px;
@@ -42,7 +42,7 @@ body {
     background: #243d35;
     color: #fff;
     transform: translateY(-160%);
-    transition: transform .15s ease;
+    transition: transform 0.15s ease;
 }
 
 .skip-link:focus {
@@ -51,14 +51,14 @@ body {
 
 button:disabled {
     cursor: wait;
-    opacity: .65;
+    opacity: 0.65;
 }
 
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after {
         scroll-behavior: auto !important;
-        transition-duration: .01ms !important;
-        animation-duration: .01ms !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
         animation-iteration-count: 1 !important;
     }
 }
@@ -118,5 +118,5 @@ p {
 
 ::selection {
     background-color: var(--cor-principal);
-    color: #FFFFFF;
+    color: #ffffff;
 }

@@ -1,22 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="PetWise organiza informações e comunicação de uma clínica veterinária.">
     <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>PetWise</title>
+
     <link rel="icon" type="image/png" href="../img/logonav-icon.png">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/home.css">
+
     <script src="../js/home.js" defer></script>
-    <title>PetWise</title>
 </head>
 
 <body class="landing-page">
     <a class="skip-link" href="#entrada">Pular para o conteúdo principal</a>
+
     <header class="header">
         <div class="container header-content">
-
             <a href="#painel" class="logo">
                 <img src="../img/logo.png" alt="PetWise">
             </a>
@@ -33,7 +37,6 @@
                 <a href="#ficha">Ficha técnica</a>
                 <a href="#equipe">Nossa equipe</a>
             </nav>
-
         </div>
     </header>
 
@@ -44,12 +47,14 @@
                 <span class="section-label">PETWISE</span>
                 <h1>Escolha seu acesso</h1>
                 <p>Entre no ambiente da clínica ou acompanhe o atendimento do seu animal.</p>
+
                 <div class="access-grid">
                     <a class="access-card" href="funcionarios.html">
                         <span class="access-icon" aria-hidden="true">Clínica</span>
                         <strong>Área da clínica</strong>
                         <span>Cadastros, prontuários e mensagens dos tutores.</span>
                     </a>
+
                     <a class="access-card" href="usuario.html">
                         <span class="access-icon" aria-hidden="true">Tutor</span>
                         <strong>Área do tutor</strong>
@@ -61,31 +66,52 @@
 
         <section class="dashboard section" id="painel">
             <div class="container">
+
                 <div class="dashboard-heading">
                     <div>
                         <span class="section-label">GESTÃO DA CLÍNICA</span>
                         <h1>Bom dia, equipe.</h1>
                         <p>Tenha os pacientes e seus prontuários sempre à mão.</p>
                     </div>
+
                     <a href="#cadastro" class="btn">Novo cadastro</a>
                 </div>
+
                 <div class="summary-grid" aria-label="Resumo da clínica">
-                    <article class="summary-card"><span>Pacientes ativos</span><strong id="total-pacientes">0</strong><small>na sua base</small></article>
-                    <article class="summary-card"><span>Tutores cadastrados</span><strong id="total-tutores">0</strong><small>responsáveis</small></article>
-                    <article class="summary-card"><span>Atendimento</span><strong>Pronto</strong><small>para começar</small></article>
+                    <article class="summary-card">
+                        <span>Pacientes ativos</span>
+                        <strong id="total-pacientes">0</strong>
+                        <small>na sua base</small>
+                    </article>
+
+                    <article class="summary-card">
+                        <span>Tutores cadastrados</span>
+                        <strong id="total-tutores">0</strong>
+                        <small>responsáveis</small>
+                    </article>
+
+                    <article class="summary-card">
+                        <span>Atendimento</span>
+                        <strong>Pronto</strong>
+                        <small>para começar</small>
+                    </article>
                 </div>
+
             </div>
         </section>
 
         <section class="portal section" id="portal">
             <div class="container">
+
                 <div class="portal-heading">
                     <div>
                         <span class="section-label">ÁREA DO TUTOR</span>
                         <h2>Acompanhe o cuidado do seu animal</h2>
                         <p>Veja a próxima consulta, orientações e fale com a equipe quando precisar.</p>
                     </div>
-                    <label class="portal-patient">Paciente
+
+                    <label class="portal-patient">
+                        Paciente
                         <select id="portal-patient-select" aria-label="Paciente da área do tutor"></select>
                     </label>
                 </div>
@@ -96,6 +122,7 @@
                         <strong id="portal-appointment-date">A definir</strong>
                         <span id="portal-appointment-info">A clínica ainda não informou os detalhes.</span>
                     </article>
+
                     <article class="professional-card">
                         <span class="section-label">PROFISSIONAL</span>
                         <strong id="portal-professional">A definir</strong>
@@ -105,23 +132,40 @@
 
                 <div class="portal-columns">
                     <article class="tips-card">
-                        <div class="card-title"><span class="section-label">ORIENTAÇÕES</span><h3>Dicas para hoje</h3></div>
+                        <div class="card-title">
+                            <span class="section-label">ORIENTAÇÕES</span>
+                            <h3>Dicas para hoje</h3>
+                        </div>
+
                         <ul>
                             <li>Mantenha água fresca disponível.</li>
                             <li>Observe mudanças no apetite e no comportamento.</li>
                             <li>Em caso de dúvida, converse com a equipe.</li>
                         </ul>
                     </article>
+
                     <article class="chat-card">
-                        <div class="card-title"><span class="section-label">MENSAGENS</span><h3>Conversa com a clínica</h3></div>
+                        <div class="card-title">
+                            <span class="section-label">MENSAGENS</span>
+                            <h3>Conversa com a clínica</h3>
+                        </div>
+
                         <div class="chat-messages" id="portal-chat-messages" aria-live="polite"></div>
+
                         <form class="chat-form" id="portal-chat-form">
                             <label class="sr-only" for="portal-chat-input">Mensagem</label>
-                            <input id="portal-chat-input" name="mensagem" maxlength="500" placeholder="Escreva uma mensagem..." required>
+                            <input
+                                id="portal-chat-input"
+                                name="mensagem"
+                                maxlength="500"
+                                placeholder="Escreva uma mensagem..."
+                                required
+                            >
                             <button class="btn" type="submit">Enviar</button>
                         </form>
                     </article>
                 </div>
+
             </div>
         </section>
 
@@ -129,9 +173,7 @@
             <div class="container hero-content">
 
                 <div class="hero-text">
-                    <span class="section-label">
-                        TECNOLOGIA E CUIDADO
-                    </span>
+                    <span class="section-label">TECNOLOGIA E CUIDADO</span>
 
                     <h1>
                         Cuidar melhor começa com
@@ -145,9 +187,7 @@
                         prática e eficiente.
                     </p>
 
-                    <a href="#sobre" class="btn">
-                        Conheça o projeto
-                    </a>
+                    <a href="#sobre" class="btn">Conheça o projeto</a>
                 </div>
 
                 <div class="hero-image">
@@ -163,9 +203,7 @@
         <section class="about section" id="sobre">
             <div class="container about-content">
 
-                <span class="section-label">
-                    SOBRE O PROJETO
-                </span>
+                <span class="section-label">SOBRE O PROJETO</span>
 
                 <h2>O que é o PetWise?</h2>
 
@@ -189,38 +227,59 @@
 
         <section class="patients section" id="pacientes">
             <div class="container patients-layout">
+
                 <div class="section-heading section-heading-left">
                     <span class="section-label">PACIENTES</span>
                     <h2>Pacientes</h2>
                     <p>Encontre rapidamente um animal ou seu responsável.</p>
-                    <input class="patient-search" id="patient-search" type="search" placeholder="Buscar paciente..." aria-label="Buscar paciente">
+
+                    <input
+                        class="patient-search"
+                        id="patient-search"
+                        type="search"
+                        placeholder="Buscar paciente..."
+                        aria-label="Buscar paciente"
+                    >
                 </div>
+
                 <div class="patient-list-panel">
                     <div class="patient-list" id="patient-list"></div>
                     <p class="empty-state" id="empty-patients">Nenhum paciente cadastrado.</p>
                 </div>
+
             </div>
         </section>
 
         <section class="conversations section clinic-only" id="conversas">
             <div class="container">
+
                 <div class="section-heading section-heading-left">
                     <span class="section-label">COMUNICAÇÃO</span>
                     <h2>Mensagens dos tutores</h2>
                     <p>Responda quando estiver disponível. A conversa fica registrada para os dois lados.</p>
                 </div>
+
                 <div class="staff-chat-layout">
                     <div class="conversation-list" id="conversation-list"></div>
+
                     <div class="staff-chat-panel">
                         <div class="staff-chat-title" id="staff-chat-title">Selecione um paciente</div>
                         <div class="chat-messages" id="staff-chat-messages"></div>
+
                         <form class="chat-form" id="staff-chat-form">
                             <label class="sr-only" for="staff-chat-input">Resposta</label>
-                            <input id="staff-chat-input" name="mensagem" maxlength="500" placeholder="Responder ao tutor..." required>
+                            <input
+                                id="staff-chat-input"
+                                name="mensagem"
+                                maxlength="500"
+                                placeholder="Responder ao tutor..."
+                                required
+                            >
                             <button class="btn" type="submit">Responder</button>
                         </form>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -242,6 +301,7 @@
 
         <section class="registration section" id="cadastro">
             <div class="container">
+
                 <div class="section-heading">
                     <span class="section-label">NOVO PACIENTE</span>
                     <h2>Novo paciente</h2>
@@ -249,18 +309,46 @@
                 </div>
 
                 <form class="registration-form" id="registration-form">
+
                     <fieldset>
                         <legend>Dados do tutor</legend>
-                        <label>Nome completo <input name="nome" required maxlength="160" autocomplete="name"></label>
-                        <label>CPF <input name="cpf" maxlength="14" inputmode="numeric"></label>
-                        <label>Telefone ou contato <input name="contato" required maxlength="160" autocomplete="tel"></label>
-                        <label>E-mail <input name="email" type="email" required maxlength="160"></label>
-                        <label>Endereço <input name="endereco" maxlength="160" autocomplete="street-address"></label>
+
+                        <label>
+                            Nome completo
+                            <input name="nome" required maxlength="160" autocomplete="name">
+                        </label>
+
+                        <label>
+                            CPF
+                            <input name="cpf" maxlength="14" inputmode="numeric">
+                        </label>
+
+                        <label>
+                            Telefone ou contato
+                            <input name="contato" required maxlength="160" autocomplete="tel">
+                        </label>
+
+                        <label>
+                            E-mail
+                            <input name="email" type="email" required maxlength="160">
+                        </label>
+
+                        <label>
+                            Endereço
+                            <input name="endereco" maxlength="160" autocomplete="street-address">
+                        </label>
                     </fieldset>
+
                     <fieldset>
                         <legend>Dados do animal</legend>
-                        <label>Nome <input name="animalNome" required maxlength="160"></label>
-                        <label>Espécie
+
+                        <label>
+                            Nome
+                            <input name="animalNome" required maxlength="160">
+                        </label>
+
+                        <label>
+                            Espécie
                             <select name="especie" required>
                                 <option value="">Selecione</option>
                                 <option>Cachorro</option>
@@ -269,29 +357,71 @@
                                 <option>Outro</option>
                             </select>
                         </label>
-                        <label>Raca <input name="raca" required maxlength="160"></label>
-                        <label>Data de nascimento <input name="dataNascimento" type="date"></label>
-                        <label>Sexo
+
+                        <label>
+                            Raca
+                            <input name="raca" required maxlength="160">
+                        </label>
+
+                        <label>
+                            Data de nascimento
+                            <input name="dataNascimento" type="date">
+                        </label>
+
+                        <label>
+                            Sexo
                             <select name="sexo" required>
                                 <option value="">Selecione</option>
                                 <option>Fêmea</option>
                                 <option>Macho</option>
                             </select>
                         </label>
-                        <label>Peso <input name="peso" required maxlength="160"></label>
-                        <label>Cor e características <input name="cor" maxlength="160"></label>
-                        <label class="full-field">Observações <textarea name="observacoes" rows="3" maxlength="500"></textarea></label>
+
+                        <label>
+                            Peso
+                            <input name="peso" required maxlength="160">
+                        </label>
+
+                        <label>
+                            Cor e características
+                            <input name="cor" maxlength="160">
+                        </label>
+
+                        <label class="full-field">
+                            Observações
+                            <textarea name="observacoes" rows="3" maxlength="500"></textarea>
+                        </label>
                     </fieldset>
+
                     <fieldset>
                         <legend>Próxima consulta</legend>
-                        <label>Data <input name="dataConsulta" type="date"></label>
-                        <label>Horário <input name="horaConsulta" type="time"></label>
-                        <label>Profissional <input name="profissional" maxlength="160" placeholder="Ex.: Dra. Ana Lima"></label>
-                        <label>Especialidade <input name="especialidade" maxlength="160" placeholder="Ex.: Clínica geral"></label>
+
+                        <label>
+                            Data
+                            <input name="dataConsulta" type="date">
+                        </label>
+
+                        <label>
+                            Horário
+                            <input name="horaConsulta" type="time">
+                        </label>
+
+                        <label>
+                            Profissional
+                            <input name="profissional" maxlength="160" placeholder="Ex.: Dra. Ana Lima">
+                        </label>
+
+                        <label>
+                            Especialidade
+                            <input name="especialidade" maxlength="160" placeholder="Ex.: Clínica geral">
+                        </label>
                     </fieldset>
+
                     <button class="btn" type="submit">Salvar cadastro</button>
                     <p class="form-message" id="form-message" role="status"></p>
+
                 </form>
+
             </div>
         </section>
 
@@ -299,9 +429,7 @@
             <div class="container">
 
                 <div class="section-heading">
-                    <span class="section-label">
-                        QUEM SOMOS
-                    </span>
+                    <span class="section-label">QUEM SOMOS</span>
 
                     <h2>Nossa equipe</h2>
 
@@ -322,21 +450,17 @@
 
     <footer class="footer">
         <div class="container footer-content">
-
             <a href="#painel" class="logo">
                 <img src="../img/logo.png" alt="PetWise">
             </a>
 
-            <p>
-                Projeto acadêmico da uniitalo.
-            </p>
+            <p>Projeto acadêmico da uniitalo.</p>
 
             <span>
                 &copy; <span id="current-year">2026</span> PetWise
             </span>
-
         </div>
     </footer>
-
 </body>
+
 </html>

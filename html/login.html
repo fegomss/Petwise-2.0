@@ -1,48 +1,95 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Acesso seguro ao sistema da clínica veterinária PetWise.">
     <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>PetWise | Acesso</title>
+
     <link rel="icon" type="image/png" href="../img/logonav-icon.png">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/home.css">
+
     <script src="../js/auth.js" defer></script>
     <script src="../js/login.js" defer></script>
-    <title>PetWise | Acesso</title>
 </head>
+
 <body class="login-page">
     <a class="skip-link" href="#login-form">Pular para o formulário de acesso</a>
+
     <main class="login-layout">
+
         <section class="login-intro">
-            <a href="home.html" class="logo"><img src="../img/logo.png" alt="PetWise, página inicial"></a>
+            <a href="home.html" class="logo">
+                <img src="../img/logo.png" alt="PetWise, página inicial">
+            </a>
+
             <div>
                 <span class="section-label">ACESSO PETWISE</span>
                 <h1>Cuidado próximo, informação organizada.</h1>
                 <p>Entre no ambiente adequado para continuar.</p>
             </div>
         </section>
+
         <section class="login-box">
             <div class="login-heading">
                 <span class="section-label">ENTRAR</span>
                 <h2>Acesse sua conta</h2>
                 <p>Use o e-mail e a senha cadastrados.</p>
             </div>
+
             <div class="access-tabs" role="tablist" aria-label="Tipo de acesso">
-                <button type="button" class="access-tab is-active" data-tipo="tutor" role="tab" aria-selected="true">Tutor</button>
-                <button type="button" class="access-tab" data-tipo="funcionario" role="tab" aria-selected="false">Funcionário</button>
+                <button
+                    type="button"
+                    class="access-tab is-active"
+                    data-tipo="tutor"
+                    role="tab"
+                    aria-selected="true"
+                >Tutor</button>
+                <button
+                    type="button"
+                    class="access-tab"
+                    data-tipo="funcionario"
+                    role="tab"
+                    aria-selected="false"
+                >Funcionário</button>
             </div>
+
             <form id="login-form" autocomplete="on">
                 <label for="login-email">E-mail</label>
-                <input id="login-email" name="email" type="email" autocomplete="username" required maxlength="160">
+                <input
+                    id="login-email"
+                    name="email"
+                    type="email"
+                    autocomplete="username"
+                    required
+                    maxlength="160"
+                >
+
                 <label for="login-password">Senha</label>
-                <input id="login-password" name="senha" type="password" autocomplete="current-password" required minlength="6" maxlength="80">
+                <input
+                    id="login-password"
+                    name="senha"
+                    type="password"
+                    autocomplete="current-password"
+                    required
+                    minlength="6"
+                    maxlength="80"
+                >
+
                 <button class="btn" type="submit">Entrar</button>
+
                 <p class="login-message" id="login-message" role="alert"></p>
-                <p class="staff-hint" id="staff-hint" hidden>Ambiente interno. Use as credenciais fornecidas pela administração.</p>
+                <p class="staff-hint" id="staff-hint" hidden>
+                    Ambiente interno. Use as credenciais fornecidas pela administração.
+                </p>
             </form>
         </section>
+
     </main>
 </body>
+
 </html>

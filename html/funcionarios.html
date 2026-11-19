@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Painel interno da clínica veterinária PetWise.">
     <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>PetWise | Funcionários</title>
+
     <link rel="icon" type="image/png" href="../img/logonav-icon.png">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/home.css">
+
     <script src="../js/auth.js" defer></script>
     <script src="../js/home.js" defer></script>
-    <title>PetWise | Funcionários</title>
 </head>
+
 <body data-area="funcionario">
     <a class="skip-link" href="#painel">Pular para o conteúdo principal</a>
+
     <header class="header">
         <div class="container header-content">
-            <a href="home.html" class="logo"><img src="../img/logo.png" alt="PetWise"></a>
+            <a href="home.html" class="logo">
+                <img src="../img/logo.png" alt="PetWise">
+            </a>
+
             <nav class="navigation" aria-label="Navegação principal">
                 <a href="#painel">Painel</a>
                 <a href="#pacientes">Pacientes</a>
@@ -29,116 +38,263 @@
     </header>
 
     <main>
+
         <section class="dashboard section" id="painel">
             <div class="container">
+
                 <div class="dashboard-heading">
                     <div>
                         <span class="section-label">ÁREA INTERNA</span>
                         <h1>Painel da clínica</h1>
                         <p>Cadastros, prontuários e mensagens em um só lugar.</p>
                     </div>
+
                     <a href="#cadastro" class="btn">Novo paciente</a>
                 </div>
+
                 <div class="summary-grid" aria-label="Resumo da clínica">
-                    <article class="summary-card"><span>Pacientes ativos</span><strong id="total-pacientes">0</strong><small>na sua base</small></article>
-                    <article class="summary-card"><span>Tutores cadastrados</span><strong id="total-tutores">0</strong><small>responsáveis</small></article>
-                    <article class="summary-card"><span>Atendimento</span><strong>Pronto</strong><small>para começar</small></article>
+                    <article class="summary-card">
+                        <span>Pacientes ativos</span>
+                        <strong id="total-pacientes">0</strong>
+                        <small>na sua base</small>
+                    </article>
+
+                    <article class="summary-card">
+                        <span>Tutores cadastrados</span>
+                        <strong id="total-tutores">0</strong>
+                        <small>responsáveis</small>
+                    </article>
+
+                    <article class="summary-card">
+                        <span>Atendimento</span>
+                        <strong>Pronto</strong>
+                        <small>para começar</small>
+                    </article>
                 </div>
+
             </div>
         </section>
 
         <section class="patients section" id="pacientes">
             <div class="container patients-layout">
+
                 <div class="section-heading section-heading-left">
                     <span class="section-label">PACIENTES</span>
                     <h2>Cadastros da clínica</h2>
                     <p>Encontre rapidamente um animal ou seu responsável.</p>
-                    <input class="patient-search" id="patient-search" type="search" placeholder="Buscar paciente..." aria-label="Buscar paciente">
+
+                    <input
+                        class="patient-search"
+                        id="patient-search"
+                        type="search"
+                        placeholder="Buscar paciente..."
+                        aria-label="Buscar paciente"
+                    >
                 </div>
+
                 <div class="patient-list-panel">
                     <div class="patient-list" id="patient-list"></div>
                     <p class="empty-state" id="empty-patients">Nenhum paciente cadastrado.</p>
                 </div>
+
             </div>
         </section>
 
         <section class="conversations section clinic-only" id="conversas">
             <div class="container">
+
                 <div class="section-heading section-heading-left">
                     <span class="section-label">COMUNICAÇÃO</span>
                     <h2>Mensagens dos tutores</h2>
                     <p>Responda quando estiver disponível. A conversa fica registrada.</p>
                 </div>
+
                 <div class="staff-chat-layout">
                     <div class="conversation-list" id="conversation-list"></div>
+
                     <div class="staff-chat-panel">
                         <div class="staff-chat-title" id="staff-chat-title">Selecione um paciente</div>
                         <div class="chat-messages" id="staff-chat-messages"></div>
+
                         <form class="chat-form" id="staff-chat-form">
                             <label class="sr-only" for="staff-chat-input">Resposta</label>
-                            <input id="staff-chat-input" name="mensagem" maxlength="500" placeholder="Responder ao tutor..." required>
+                            <input
+                                id="staff-chat-input"
+                                name="mensagem"
+                                maxlength="500"
+                                placeholder="Responder ao tutor..."
+                                required
+                            >
                             <button class="btn" type="submit">Responder</button>
                         </form>
                     </div>
                 </div>
+
             </div>
         </section>
 
         <section class="record section" id="ficha">
             <div class="container">
+
                 <div class="section-heading">
                     <span class="section-label">PRONTUÁRIO</span>
                     <h2>Prontuário do paciente</h2>
                     <p>Selecione um paciente para consultar os dados registrados.</p>
                 </div>
+
                 <div class="record-grid" id="record-grid" aria-live="polite">
                     <p>Selecione um paciente para consultar os dados.</p>
                 </div>
+
             </div>
         </section>
 
         <section class="registration section" id="cadastro">
             <div class="container">
+
                 <div class="section-heading">
                     <span class="section-label">NOVO PACIENTE</span>
                     <h2>Cadastrar tutor e animal</h2>
                     <p>Os dados ficam disponíveis para a equipe e para a área do tutor.</p>
                 </div>
+
                 <form class="registration-form" id="registration-form">
+
                     <fieldset>
                         <legend>Dados do tutor</legend>
-                        <label>Nome completo <input name="nome" required maxlength="160"></label>
-                        <label>CPF <input name="cpf" maxlength="14" inputmode="numeric"></label>
-                        <label>Telefone ou contato <input name="contato" required maxlength="160"></label>
-                        <label>E-mail <input name="email" type="email" required maxlength="160"></label>
-                        <label>Senha de acesso do tutor <input name="senhaTutor" type="password" autocomplete="new-password" required minlength="6" maxlength="80"></label>
-                        <label>Endereço <input name="endereco" maxlength="160"></label>
+
+                        <label>
+                            Nome completo
+                            <input name="nome" required maxlength="160">
+                        </label>
+
+                        <label>
+                            CPF
+                            <input name="cpf" maxlength="14" inputmode="numeric">
+                        </label>
+
+                        <label>
+                            Telefone ou contato
+                            <input name="contato" required maxlength="160">
+                        </label>
+
+                        <label>
+                            E-mail
+                            <input name="email" type="email" required maxlength="160">
+                        </label>
+
+                        <label>
+                            Senha de acesso do tutor
+                            <input
+                                name="senhaTutor"
+                                type="password"
+                                autocomplete="new-password"
+                                required
+                                minlength="6"
+                                maxlength="80"
+                            >
+                        </label>
+
+                        <label>
+                            Endereço
+                            <input name="endereco" maxlength="160">
+                        </label>
                     </fieldset>
+
                     <fieldset>
                         <legend>Dados do animal</legend>
-                        <label>Nome <input name="animalNome" required maxlength="160"></label>
-                        <label>Espécie <select name="especie" required><option value="">Selecione</option><option>Cachorro</option><option>Gato</option><option>Ave</option><option>Outro</option></select></label>
-                        <label>Raça <input name="raca" required maxlength="160"></label>
-                        <label>Data de nascimento <input name="dataNascimento" type="date"></label>
-                        <label>Sexo <select name="sexo" required><option value="">Selecione</option><option>Fêmea</option><option>Macho</option></select></label>
-                        <label>Peso <input name="peso" required maxlength="160"></label>
-                        <label>Cor e características <input name="cor" maxlength="160"></label>
-                        <label class="full-field">Observações <textarea name="observacoes" rows="3" maxlength="500"></textarea></label>
+
+                        <label>
+                            Nome
+                            <input name="animalNome" required maxlength="160">
+                        </label>
+
+                        <label>
+                            Espécie
+                            <select name="especie" required>
+                                <option value="">Selecione</option>
+                                <option>Cachorro</option>
+                                <option>Gato</option>
+                                <option>Ave</option>
+                                <option>Outro</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Raça
+                            <input name="raca" required maxlength="160">
+                        </label>
+
+                        <label>
+                            Data de nascimento
+                            <input name="dataNascimento" type="date">
+                        </label>
+
+                        <label>
+                            Sexo
+                            <select name="sexo" required>
+                                <option value="">Selecione</option>
+                                <option>Fêmea</option>
+                                <option>Macho</option>
+                            </select>
+                        </label>
+
+                        <label>
+                            Peso
+                            <input name="peso" required maxlength="160">
+                        </label>
+
+                        <label>
+                            Cor e características
+                            <input name="cor" maxlength="160">
+                        </label>
+
+                        <label class="full-field">
+                            Observações
+                            <textarea name="observacoes" rows="3" maxlength="500"></textarea>
+                        </label>
                     </fieldset>
+
                     <fieldset>
                         <legend>Próxima consulta</legend>
-                        <label>Data <input name="dataConsulta" type="date"></label>
-                        <label>Horário <input name="horaConsulta" type="time"></label>
-                        <label>Profissional <input name="profissional" maxlength="160"></label>
-                        <label>Especialidade <input name="especialidade" maxlength="160"></label>
+
+                        <label>
+                            Data
+                            <input name="dataConsulta" type="date">
+                        </label>
+
+                        <label>
+                            Horário
+                            <input name="horaConsulta" type="time">
+                        </label>
+
+                        <label>
+                            Profissional
+                            <input name="profissional" maxlength="160">
+                        </label>
+
+                        <label>
+                            Especialidade
+                            <input name="especialidade" maxlength="160">
+                        </label>
                     </fieldset>
+
                     <button class="btn" type="submit">Salvar cadastro</button>
                     <p class="form-message" id="form-message" role="status"></p>
+
                 </form>
+
             </div>
         </section>
+
     </main>
 
-    <footer class="footer"><div class="container footer-content"><span>© 2026 PetWise · Área interna</span><a href="usuario.html">Área do tutor</a></div></footer>
+    <footer class="footer">
+        <div class="container footer-content">
+            <span>© 2026 PetWise · Área interna</span>
+            <a href="usuario.html">Área do tutor</a>
+        </div>
+    </footer>
 </body>
+
 </html>

@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Acompanhamento do atendimento veterinário para tutores PetWise.">
     <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>PetWise | Área do tutor</title>
+
     <link rel="icon" type="image/png" href="../img/logonav-icon.png">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/home.css">
+
     <script src="../js/auth.js" defer></script>
     <script src="../js/usuario.js" defer></script>
-    <title>PetWise | Área do tutor</title>
 </head>
+
 <body data-area="tutor">
     <a class="skip-link" href="#portal">Pular para o conteúdo principal</a>
+
     <header class="header">
         <div class="container header-content">
-            <a href="home.html" class="logo"><img src="../img/logo.png" alt="PetWise"></a>
+            <a href="home.html" class="logo">
+                <img src="../img/logo.png" alt="PetWise">
+            </a>
+
             <nav class="navigation" aria-label="Navegação principal">
                 <a href="#portal">Meu acompanhamento</a>
                 <a href="#mensagens">Mensagens</a>
@@ -27,15 +36,19 @@
     </header>
 
     <main>
+
         <section class="portal section" id="portal">
             <div class="container">
+
                 <div class="portal-heading">
                     <div>
                         <span class="section-label">ÁREA DO TUTOR</span>
                         <h1>Acompanhe o cuidado do seu animal</h1>
                         <p>Consulte informações da próxima visita e mantenha contato com a clínica.</p>
                     </div>
-                    <label class="portal-patient">Paciente
+
+                    <label class="portal-patient">
+                        Paciente
                         <select id="portal-patient-select" aria-label="Paciente da área do tutor"></select>
                     </label>
                 </div>
@@ -46,6 +59,7 @@
                         <strong id="portal-appointment-date">A definir</strong>
                         <span id="portal-appointment-info">A clínica ainda não informou os detalhes.</span>
                     </article>
+
                     <article class="professional-card">
                         <span class="section-label">PROFISSIONAL</span>
                         <strong id="portal-professional">A definir</strong>
@@ -55,28 +69,55 @@
 
                 <div class="portal-columns">
                     <article class="tips-card">
-                        <div class="card-title"><span class="section-label">ORIENTAÇÕES</span><h2>Dicas para hoje</h2></div>
+                        <div class="card-title">
+                            <span class="section-label">ORIENTAÇÕES</span>
+                            <h2>Dicas para hoje</h2>
+                        </div>
+
                         <ul>
                             <li>Mantenha água fresca disponível.</li>
                             <li>Observe mudanças no apetite e no comportamento.</li>
                             <li>Em caso de dúvida, converse com a equipe.</li>
-                            <li>Este canal não substitui atendimento de urgência. Em uma emergência, procure um serviço veterinário 24 horas.</li>
+                            <li>
+                                Este canal não substitui atendimento de urgência.
+                                Em uma emergência, procure um serviço veterinário 24 horas.
+                            </li>
                         </ul>
                     </article>
+
                     <article class="chat-card" id="mensagens">
-                        <div class="card-title"><span class="section-label">MENSAGENS</span><h2>Conversa com a clínica</h2></div>
+                        <div class="card-title">
+                            <span class="section-label">MENSAGENS</span>
+                            <h2>Conversa com a clínica</h2>
+                        </div>
+
                         <div class="chat-messages" id="portal-chat-messages" aria-live="polite"></div>
+
                         <form class="chat-form" id="portal-chat-form">
                             <label class="sr-only" for="portal-chat-input">Mensagem</label>
-                            <input id="portal-chat-input" name="mensagem" maxlength="500" placeholder="Escreva uma mensagem..." required>
+                            <input
+                                id="portal-chat-input"
+                                name="mensagem"
+                                maxlength="500"
+                                placeholder="Escreva uma mensagem..."
+                                required
+                            >
                             <button class="btn" type="submit">Enviar</button>
                         </form>
                     </article>
                 </div>
+
             </div>
         </section>
+
     </main>
 
-    <footer class="footer"><div class="container footer-content"><span>© 2026 PetWise · Área do tutor</span><a href="funcionarios.html">Área da clínica</a></div></footer>
+    <footer class="footer">
+        <div class="container footer-content">
+            <span>© 2026 PetWise · Área do tutor</span>
+            <a href="funcionarios.html">Área da clínica</a>
+        </div>
+    </footer>
 </body>
+
 </html>
